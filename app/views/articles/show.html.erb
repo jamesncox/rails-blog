@@ -1,6 +1,8 @@
 <h1><%= @article.title %></h1>
 
-<p><%= @article.body %></p>
+<p><%= @article.body %></p><br>
+
+<%= link_to "Edit", edit_article_path(@article) %><br><br>
 
 <a href="/"  style="font-weight:bold;color:blue;">
     <%= "Back" %>
