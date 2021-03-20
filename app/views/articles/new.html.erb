@@ -7,6 +7,7 @@
         <% @article.errors.full_messages_for(:title).each do |message| %>
             <div style="font-weight:bold;color:red;"><%= message %></div>
         <% end %>
+        <br>
     </div>
 
     <div>
@@ -15,6 +16,7 @@
         <% @article.errors.full_messages_for(:body).each do |message| %>
             <div style="font-weight:bold;color:red;"><%= message %></div>
         <% end %>
+        <br>
     </div>
 
     <div>
