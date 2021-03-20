@@ -2,9 +2,12 @@
 
 <p><%= @article.body %></p><br>
 
-<a href="/articles/<%= @article.id %>/edit" style="font-weight:bold;color:gray;background-color:lightgray;">
-    <%= "Edit" %>
-</a><br><br>
+<ul>
+  <li><%= link_to "Edit", edit_article_path(@article), {:style=>'color:orange;'} %></li>
+  <li><%= link_to "Delete #{@article.title}?", article_path(@article),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
 
 <a href="/"  style="font-weight:bold;color:blue;">
     <%= "Back" %>
